@@ -1,0 +1,168 @@
+/* Global Body Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to right, #2702f8, #f8039e); /* Gradient background */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  box-sizing: border-box;
+  color: #333;
+}
+
+/* Container for the quiz form */
+.container {
+  width: 100%;
+  max-width: 700px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  text-align: left; /* Align everything to the left inside the container */
+  box-sizing: border-box;
+  background-color: #ffffffc0; /* Semi-transparent white background */
+}
+
+/* Header Styling */
+h1 {
+  color: #3713e8; /* Bold color for heading */
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center; /* Center the heading */
+}
+
+h2 {
+  color: #0e0502;
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  text-align: center; /* Center the heading */
+}
+
+/* Form Styling (for name entry and start quiz) */
+#nameForm, #quizSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Input and Button Styling */
+input, button {
+  margin: 12px 0;
+  padding: 12px 20px;
+  width: 80%;
+  font-size: 1.1em;
+  border: 2px solid #feb47b;
+  border-radius: 8px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+/* Button Styling */
+button {
+  background-color: #3aaf23; /* Brighter, bold background color */
+  color: white; /* White text for contrast */
+  border: none;
+  cursor: pointer;
+  font-size: 1.2em;
+  padding: 15px 25px; /* Slightly larger padding */
+  border-radius: 8px;
+  width: 100%; /* Make button take full width of container */
+  text-align: center; /* Ensure the text is centered */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #098916; /* Subtle hover effect */
+  transform: translateY(-2px); /* Button lift effect on hover */
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+
+/* Styling for the quiz questions section */
+#questions {
+  margin-top: 30px;
+  width: 100%;
+}
+
+/* Question Styling */
+.question {
+  margin-bottom: 25px;
+}
+
+.question-label {
+  font-weight: bold;
+  font-size: 1.2em;
+  display: block;
+  margin-bottom: 8px;
+  color: #0f0604; /* Color for questions */
+}
+
+/* Ensure questions and options are left-aligned */
+.radio-options {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 30px; /* Adds spacing between the question and options */
+}
+
+.radio-options label {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-weight: bold; /* Bold option text */
+  color: #0d0c0c;
+  display: flex;
+  align-items: center;
+}
+
+/* Styling for radio buttons */
+input[type="radio"] {
+  margin-right: 15px;
+  transform: scale(1.3); /* Enlarge radio buttons slightly */
+  accent-color: #120461; /* Accent color for radio buttons */
+}
+
+/* Partition/Divider between questions */
+hr {
+  margin: 20px 0;
+  border: 1px solid #06066a;
+}
+
+/* Message Styling */
+#message {
+  margin-top: 20px;
+  color: red;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+    margin: 20px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.4em;
+  }
+
+  input, button {
+    width: 100%;
+  }
+}
