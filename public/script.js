@@ -32,7 +32,7 @@ const questions = [
   "Who is the most manipulative person?",
   "Who is the most likely to lie about something important?",
   "Whom would you slap if you got the chance?",
-  "Whom would you kiss if you got the chance?",
+  
   "With whom would you like to go on a road trip?",
   "Who would be the worst travel companion?",
   "Who will remain single forever?",
