@@ -10,8 +10,9 @@ app.use(bodyParser.json());
 app.use(express.static("public"));
 
 // MongoDB Connection
+const mongoUri = process.env.MONGO_URI || "mongodb+srv://amritanshuy0503:<db_password>@cluster0.5qopna6.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"; // Update with your MongoDB Atlas URI
 mongoose
-  .connect("mongodb://localhost:27017/groupQuiz", { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect(mongoUri, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log("Connected to MongoDB"))
   .catch((err) => console.error("Error connecting to MongoDB:", err));
 
@@ -20,9 +21,9 @@ const responseSchema = new mongoose.Schema({
   name: { type: String, required: true },
   answers: [
     {
-      question: { type: String, required: true }, // Storing the question text
-      answer: { type: String, required: true },  // Storing the selected answer
-      options: { type: [String], required: true }, // Storing all options for the question
+      question: { type: String, required: true },
+      answer: { type: String, required: true },
+      options: { type: [String], required: true },
     },
   ],
 });
@@ -62,7 +63,7 @@ const questions = [
   "Who is the most manipulative person?",
   "Who is the most likely to lie about something important?",
   "Whom would you slap if you got the chance?",
-  
+
   "With whom would you like to go on a road trip?",
   "Who would be the worst travel companion?",
   "Who will remain single forever?",
@@ -132,5 +133,5 @@ app.get("/", (req, res) => {
 });
 
 // Start the server
-const PORT = 9000;
+const PORT = process.env.PORT || 9000;
 app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
