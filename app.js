@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 app.use(express.static("public"));
 
 // MongoDB Connection
-const mongoUri = process.env.MONGO_URI || "mongodb+srv://amritanshuy0503:<db_password>@cluster0.5qopna6.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"; // Update with your MongoDB Atlas URI
+const mongoUri = process.env.MONGO_URI || "mongodb+srv://amritanshuy0503:Ay05@msd07@cluster0.5qopna6.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"; // Update with your MongoDB Atlas URI
 mongoose
   .connect(mongoUri, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log("Connected to MongoDB"))
